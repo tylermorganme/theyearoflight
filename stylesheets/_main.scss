@@ -1,0 +1,59 @@
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars {
+  background:#000 url(../img/starscape2.jpg) no-repeat center center;
+  z-index:-2;
+  background-size: auto 100%;
+}
+
+.stars, .twinkling, .clouds {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  height:120%;
+  display:block;
+}
+
+.twinkling{
+  background:transparent url(../img/flicker.png) repeat top center;
+  z-index:-1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.container-full-width {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar>.container-fluid {
+  background: #000;
+  border-bottom: medium solid #ccb24c;
+}
+
+.content {
+  padding: 5px;
+  background: #ffffff;
+}
