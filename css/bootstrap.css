@@ -8599,6 +8599,71 @@ button.close {
     display: none !important;
   }
 }
+/* line 5, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 @keyframes move-twink-back {
   from {
     background-position: 0 0;
@@ -8631,14 +8696,19 @@ button.close {
     background-position: -10000px 5000px;
   }
 }
-/* line 19, ../stylesheets/_main.scss */
+/* line 21, ../stylesheets/_main.scss */
+body {
+  margin-top: 300px;
+}
+
+/* line 25, ../stylesheets/_main.scss */
 .stars {
   background: #000 url(../img/starscape2.jpg) no-repeat center center;
   z-index: -2;
   height: 100%;
 }
 
-/* line 25, ../stylesheets/_main.scss */
+/* line 31, ../stylesheets/_main.scss */
 .stars, .twinkling, .clouds {
   position: fixed;
   top: 0;
@@ -8649,7 +8719,7 @@ button.close {
   display: block;
 }
 
-/* line 35, ../stylesheets/_main.scss */
+/* line 41, ../stylesheets/_main.scss */
 .twinkling {
   background: transparent url(../img/flicker.png) repeat top center;
   z-index: -1;
@@ -8660,55 +8730,26 @@ button.close {
   animation: move-twink-back 200s linear infinite;
 }
 
-/* line 46, ../stylesheets/_main.scss */
-.container-full-width {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-/* line 51, ../stylesheets/_main.scss */
-.navbar > .container-fluid {
-  background: #000;
-  border-bottom: medium solid #ccb24c;
-}
-
-/* line 56, ../stylesheets/_main.scss */
+/* line 52, ../stylesheets/_main.scss */
 .content {
   padding: 5px;
   background: #ffffff;
 }
 
-/* line 61, ../stylesheets/_main.scss */
+/* line 57, ../stylesheets/_main.scss */
 nav {
-  position: relative;
-  width: 100%;
-  margin: 25px auto 200px;
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 275px;
+  width: 280px;
+  margin: 25px auto 25px;
   text-align: center;
 }
-
-/* line 68, ../stylesheets/_main.scss */
+/* line 65, ../stylesheets/_main.scss */
 nav > div {
-  position: relative;
+  position: fixed;
   padding: 0;
-  display: inline-block;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* line 76, ../stylesheets/_main.scss */
-#nav-1 {
-  top: 175px;
-  right: 20px;
-}
-
-/* line 81, ../stylesheets/_main.scss */
-#nav-3 {
-  top: 175px;
-  left: 20px;
-}
-
-/* line 87, ../stylesheets/_main.scss */
-.nav-orb > a {
   background: #ffffff;
   height: 100px;
   width: 100px;
@@ -8719,7 +8760,44 @@ nav > div {
   -moz-box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+}
+
+/* line 81, ../stylesheets/_main.scss */
+.lower-nav {
+  top: 175px;
+}
+
+/* line 85, ../stylesheets/_main.scss */
+#nav-1 {
+  left: 50%;
+  margin-left: -170px;
+  -moz-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+
+/* line 91, ../stylesheets/_main.scss */
+#nav-2 {
+  left: 50%;
+  margin-left: -50px;
+  -moz-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+
+/* line 97, ../stylesheets/_main.scss */
+#nav-3 {
+  right: 50%;
+  margin-right: -170px;
+  -moz-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+
+/* line 103, ../stylesheets/_main.scss */
+.upper-nav {
+  top: 0;
 }

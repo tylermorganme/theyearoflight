@@ -1,3 +1,5 @@
+@import "compass/css3";
+@import "compass/reset";
 
 @keyframes move-twink-back {
     from {background-position:0 0;}
@@ -14,6 +16,10 @@
 @-ms-keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
+}
+
+body {
+  margin-top: 300px;
 }
 
 .stars {
@@ -43,59 +49,60 @@
   animation:move-twink-back 200s linear infinite;
 }
 
-.container-full-width {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.navbar>.container-fluid {
-  background: #000;
-  border-bottom: medium solid #ccb24c;
-}
-
 .content {
   padding: 5px;
   background: #ffffff;
 }
 
 nav {
-  position: relative;
-  width: 100%;
-  margin: 25px auto 200px;
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 275px;
+  width: 280px;
+  margin: 25px auto 25px;
   text-align: center;
+  >div {
+    position: fixed;
+    padding: 0;
+    background: #ffffff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -moz-box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
+    -webkit-box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
+  }
 }
 
-nav>div {
-  position: relative;
-  padding: 0;
-  display: inline-block;
-  margin-right: auto;
-  text-align: center;
+.lower-nav{
+  top: 175px;
 }
 
 #nav-1 {
-  top: 175px;
-  right: 20px;
+  left: 50%;
+  margin-left: -170px;
+  @include transition(all 0.75s ease);
+}
+
+#nav-2 {
+  left: 50%;
+  margin-left: -50px;
+  @include transition(all 0.75s ease);
 }
 
 #nav-3 {
-  top: 175px;
-  left: 20px;
+  right: 50%;
+  margin-right: -170px;
+  @include transition(all 0.75s ease);
+}
+
+.upper-nav {
+  top: 0;
 }
 
 
-.nav-orb>a {
-  background: #ffffff;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-  -moz-box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
-  -webkit-box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
-  box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
+
