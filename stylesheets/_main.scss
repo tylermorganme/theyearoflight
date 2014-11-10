@@ -76,12 +76,12 @@ nav {
 }
 
 .lower-nav{
-  top: 175px;
+  top: 100%;
+  margin-top: -125px;
 }
 
 #nav-1 {
-  left: 50%;
-  margin-left: -170px;
+  left: 25px;
   @include transition(all 0.75s ease);
 }
 
@@ -92,8 +92,7 @@ nav {
 }
 
 #nav-3 {
-  right: 50%;
-  margin-right: -170px;
+  right: 25px;
   @include transition(all 0.75s ease);
 }
 
@@ -114,6 +113,14 @@ nav {
   @include transition(all 0.5s ease);
 }
 
+nav a {
+  display: block;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  color: #000000;
+  text-align: center;
+}
 
 
 

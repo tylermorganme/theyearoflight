@@ -8761,13 +8761,13 @@ nav > div {
 
 /* line 78, ../stylesheets/_main.scss */
 .lower-nav {
-  top: 175px;
+  top: 100%;
+  margin-top: -125px;
 }
 
-/* line 82, ../stylesheets/_main.scss */
+/* line 83, ../stylesheets/_main.scss */
 #nav-1 {
-  left: 50%;
-  margin-left: -170px;
+  left: 25px;
   -moz-transition: all 0.75s ease;
   -o-transition: all 0.75s ease;
   -webkit-transition: all 0.75s ease;
@@ -8786,25 +8786,24 @@ nav > div {
 
 /* line 94, ../stylesheets/_main.scss */
 #nav-3 {
-  right: 50%;
-  margin-right: -170px;
+  right: 25px;
   -moz-transition: all 0.75s ease;
   -o-transition: all 0.75s ease;
   -webkit-transition: all 0.75s ease;
   transition: all 0.75s ease;
 }
 
-/* line 100, ../stylesheets/_main.scss */
+/* line 99, ../stylesheets/_main.scss */
 .upper-nav {
   top: 25px;
 }
 
-/* line 104, ../stylesheets/_main.scss */
+/* line 103, ../stylesheets/_main.scss */
 .sticky-nav {
   height: 150px;
 }
 
-/* line 108, ../stylesheets/_main.scss */
+/* line 107, ../stylesheets/_main.scss */
 .disappear {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -8814,10 +8813,20 @@ nav > div {
   transition: all 0.5s ease;
 }
 
-/* line 113, ../stylesheets/_main.scss */
+/* line 112, ../stylesheets/_main.scss */
 #tubular-container {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+/* line 116, ../stylesheets/_main.scss */
+nav a {
+  display: block;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  color: #000000;
+  text-align: center;
 }

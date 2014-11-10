@@ -49,20 +49,18 @@ $().ready(function() {
 
   $('.play-pause').click(function() {
     if ($('.play-pause').hasClass("tubular-play")) {
-        $('.play-pause').addClass("tubular-pause").removeClass("tubular-play");
-        $('#tubular-container').addClass("disappear")
-        $("#nav-1").addClass("lower-nav");
-        $("#nav-3").addClass("lower-nav");
-        $("#nav-1").removeClass("upper-nav");
-        $("#nav-3").removeClass("upper-nav");
+      $('.play-pause').addClass("tubular-pause").removeClass("tubular-play");
+      $('#tubular-container').addClass("disappear")
+      $("#nav-2").addClass("upper-nav");
+      $("#nav-2").removeClass("lower-nav");
+      $("#nav-2 a").html("Play");
       
     } else {
       $('.play-pause').addClass("tubular-play").removeClass("tubular-pause");
-      $("#nav-1").addClass("upper-nav");
-      $("#nav-3").addClass("upper-nav");
-      $("#nav-1").removeClass("lower-nav");
-      $("#nav-3").removeClass("lower-nav");
+      $("#nav-2").addClass("lower-nav");
+      $("#nav-2").removeClass("upper-nav");
       $('#tubular-container').removeClass("disappear")
+      $("#nav-2 a").html("Pause");
     }
   });
 });
