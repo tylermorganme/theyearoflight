@@ -8697,18 +8697,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 /* line 21, ../stylesheets/_main.scss */
-body {
-  margin-top: 300px;
+* {
+  z-index: 2;
 }
 
-/* line 25, ../stylesheets/_main.scss */
+/* line 24, ../stylesheets/_main.scss */
 .stars {
   background: #000 url(../img/starscape2.jpg) no-repeat center center;
   z-index: -2;
   height: 100%;
 }
 
-/* line 31, ../stylesheets/_main.scss */
+/* line 30, ../stylesheets/_main.scss */
 .stars, .twinkling, .clouds {
   position: fixed;
   top: 0;
@@ -8719,7 +8719,7 @@ body {
   display: block;
 }
 
-/* line 41, ../stylesheets/_main.scss */
+/* line 40, ../stylesheets/_main.scss */
 .twinkling {
   background: transparent url(../img/flicker.png) repeat top center;
   z-index: -1;
@@ -8730,23 +8730,20 @@ body {
   animation: move-twink-back 200s linear infinite;
 }
 
-/* line 52, ../stylesheets/_main.scss */
+/* line 51, ../stylesheets/_main.scss */
 .content {
   padding: 5px;
   background: #ffffff;
 }
 
-/* line 57, ../stylesheets/_main.scss */
+/* line 56, ../stylesheets/_main.scss */
 nav {
-  display: block;
-  position: fixed;
+  position: relative;
   top: 0;
-  height: 275px;
-  width: 280px;
-  margin: 25px auto 25px;
-  text-align: center;
+  width: 100%;
+  height: 300px;
 }
-/* line 65, ../stylesheets/_main.scss */
+/* line 62, ../stylesheets/_main.scss */
 nav > div {
   position: fixed;
   padding: 0;
@@ -8762,12 +8759,12 @@ nav > div {
   box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
 }
 
-/* line 81, ../stylesheets/_main.scss */
+/* line 78, ../stylesheets/_main.scss */
 .lower-nav {
   top: 175px;
 }
 
-/* line 85, ../stylesheets/_main.scss */
+/* line 82, ../stylesheets/_main.scss */
 #nav-1 {
   left: 50%;
   margin-left: -170px;
@@ -8777,7 +8774,7 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 91, ../stylesheets/_main.scss */
+/* line 88, ../stylesheets/_main.scss */
 #nav-2 {
   left: 50%;
   margin-left: -50px;
@@ -8787,7 +8784,7 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 97, ../stylesheets/_main.scss */
+/* line 94, ../stylesheets/_main.scss */
 #nav-3 {
   right: 50%;
   margin-right: -170px;
@@ -8797,7 +8794,30 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 103, ../stylesheets/_main.scss */
+/* line 100, ../stylesheets/_main.scss */
 .upper-nav {
-  top: 0;
+  top: 25px;
+}
+
+/* line 104, ../stylesheets/_main.scss */
+.sticky-nav {
+  height: 150px;
+}
+
+/* line 108, ../stylesheets/_main.scss */
+.disappear {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 113, ../stylesheets/_main.scss */
+#tubular-container {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }

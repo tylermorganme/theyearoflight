@@ -18,10 +18,9 @@
     to {background-position:-10000px 5000px;}
 }
 
-body {
-  margin-top: 300px;
+* {
+  z-index: 2;
 }
-
 .stars {
   background:#000 url(../img/starscape2.jpg) no-repeat center center;
   z-index:-2;
@@ -55,13 +54,11 @@ body {
 }
 
 nav {
-  display: block;
-  position: fixed;
+  position: relative;
   top: 0;
-  height: 275px;
-  width: 280px;
-  margin: 25px auto 25px;
-  text-align: center;
+  width: 100%;
+  height: 300px;
+  //@include transition(all 0.75s ease);
   >div {
     position: fixed;
     padding: 0;
@@ -101,8 +98,22 @@ nav {
 }
 
 .upper-nav {
-  top: 0;
+  top: 25px;
 }
+
+.sticky-nav {
+  height: 150px;
+}
+
+.disappear {
+  @include opacity(0);
+  @include transition(all 0.5s ease);
+}
+
+#tubular-container {
+  @include transition(all 0.5s ease);
+}
+
 
 
 
