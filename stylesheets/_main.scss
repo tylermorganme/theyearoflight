@@ -27,7 +27,7 @@
   height: 100%;
 }
 
-.stars, .twinkling, .clouds {
+.stars, .twinkling{
   position:fixed;
   top:0;
   left:0;
@@ -35,6 +35,7 @@
   bottom:0;
   height:120%;
   display:block;
+  @include filter(invert(1));
 }
 
 .twinkling{
@@ -62,16 +63,13 @@ nav {
   >div {
     position: fixed;
     padding: 0;
-    background: #ffffff;
+    background: #000000;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     zoom: 1;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-    -moz-box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
-    -webkit-box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
-    box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
+    @include opacity(0.9);
+    @include box-shadow(0 0 10px 4px rgba(0,0,0,0.8));
   }
 }
 
@@ -80,18 +78,18 @@ nav {
   margin-top: -125px;
 }
 
-#nav-1 {
+#btn-play {
   left: 25px;
   @include transition(all 0.75s ease);
 }
 
-#nav-2 {
+#btn-home {
   left: 50%;
   margin-left: -50px;
   @include transition(all 0.75s ease);
 }
 
-#nav-3 {
+#btn-mute {
   right: 25px;
   @include transition(all 0.75s ease);
 }
@@ -118,7 +116,7 @@ nav a {
   height: 100px;
   width: 100px;
   line-height: 100px;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 

@@ -2,6 +2,7 @@
 // be triggered. The function will be called after it stops being called for
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
+var mute = false;
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
@@ -18,21 +19,6 @@ function debounce(func, wait, immediate) {
 };
 
 $().ready(function() {
-  $(function(){
-    $(window).scroll(function(){
-      var winTop = $(window).scrollTop();
-      if(winTop >= 10){
-        $("#nav-1").addClass("lower-nav");
-        $("#nav-3").addClass("lower-nav");
-        $("nav").addClass("sticky-nav");
-      }else{
-        $("#nav-1").removeClass("lower-nav");
-        $("#nav-3").removeClass("lower-nav");
-        $("nav").removeClass("sticky-nav");
-      }//if-else
-      console.log(winTop);
-    });//win func.
-  });//ready func.
 
   $(function(){
     $(window).scroll(function(){
@@ -45,22 +31,33 @@ $().ready(function() {
     });//win func.
   });//ready func.
 
-  $('.video').tubular({videoId: 'Ubg6lRQyhNM'}); 
+  $('.video').tubular({videoId: 'Ubg6lRQyhNM', mute: false}); 
 
-  $('.play-pause').click(function() {
-    if ($('.play-pause').hasClass("tubular-play")) {
-      $('.play-pause').addClass("tubular-pause").removeClass("tubular-play");
+  $('.btn-play-pause').click(function() {
+    if ($('.btn-play-pause').hasClass("tubular-play")) {
+      $('.btn-play-pause').addClass("tubular-pause").removeClass("tubular-play");
       $('#tubular-container').addClass("disappear")
-      $("#nav-2").addClass("upper-nav");
-      $("#nav-2").removeClass("lower-nav");
-      $("#nav-2 a").html("Play");
+      $("#btn-home").addClass("upper-nav");
+      $("#btn-home").removeClass("lower-nav");
+      $("#btn-play a").html("PLAY");
       
     } else {
-      $('.play-pause').addClass("tubular-play").removeClass("tubular-pause");
-      $("#nav-2").addClass("lower-nav");
-      $("#nav-2").removeClass("upper-nav");
+      $('.btn-play-pause').addClass("tubular-play").removeClass("tubular-pause");
+      $("#btn-home").addClass("lower-nav");
+      $("#btn-home").removeClass("upper-nav");
       $('#tubular-container').removeClass("disappear")
-      $("#nav-2 a").html("Pause");
+      $("#btn-play a").html("PAUSE");
+    }
+  });
+
+    $('.btn-mute').click(function() {
+
+    if (mute) {
+      $("#btn-mute a").html("MUTE"); 
+      mute = !mute;
+    } else {
+      $("#btn-mute a").html("UNMUTE");
+      mute = !mute;
     }
   });
 });
