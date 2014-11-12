@@ -3,6 +3,7 @@
 // N milliseconds. If `immediate` is passed, trigger the function on the
 // leading edge, instead of the trailing.
 var mute = false;
+var home = false;
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
@@ -31,33 +32,43 @@ $().ready(function() {
     });//win func.
   });//ready func.
 
-  $('.video').tubular({videoId: 'Ubg6lRQyhNM', mute: false}); 
+  $('.video').tubular({videoId: 'Ubg6lRQyhNM', mute: true}); 
 
-  $('.btn-play-pause').click(function() {
-    if ($('.btn-play-pause').hasClass("tubular-play")) {
-      $('.btn-play-pause').addClass("tubular-pause").removeClass("tubular-play");
+  $('#btn-home').click(function(e) {
+    e.preventDefault();
+    if (!home) {
       $('#tubular-container').addClass("disappear")
-      $("#btn-home").addClass("upper-nav");
-      $("#btn-home").removeClass("lower-nav");
-      $("#btn-play a").html("PLAY");
-      
+      //$("#btn-home").addClass("upper-nav").removeClass("lower-nav");
+      //$('body').addClass("scrollable").removeClass("non-scrollable");
+      home = !home;
     } else {
-      $('.btn-play-pause').addClass("tubular-play").removeClass("tubular-pause");
-      $("#btn-home").addClass("lower-nav");
-      $("#btn-home").removeClass("upper-nav");
-      $('#tubular-container').removeClass("disappear")
-      $("#btn-play a").html("PAUSE");
+      //$("#btn-home").addClass("lower-nav").removeClass("upper-nav");;
+      $('#tubular-container').removeClass("disappear");
+      //$('body').addClass("non-scrollable").removeClass("scrollable");
+      home = !home;
     }
   });
 
-    $('.btn-mute').click(function() {
-
-    if (mute) {
-      $("#btn-mute a").html("MUTE"); 
-      mute = !mute;
+  $('#btn-play').click(function() {
+    if ($('#btn-play').hasClass("tubular-play")) {
+      $('#btn-play').addClass("tubular-pause").removeClass("tubular-play");
+      $("#btn-play a").html("PLAY");
     } else {
-      $("#btn-mute a").html("UNMUTE");
-      mute = !mute;
-    }
+      $('#btn-play').addClass("tubular-play").removeClass("tubular-pause");
+      $("#btn-play a").html("PAUSE");
+    } 
+  });
+
+
+
+  $('#btn-mute').click(function() {
+
+  if (mute) {
+    $("#btn-mute a").html("MUTE"); 
+    mute = !mute;
+  } else {
+    $("#btn-mute a").html("UNMUTE");
+    mute = !mute;
+  }
   });
 });
