@@ -21,6 +21,23 @@
 * {
   z-index: 2;
 }
+
+nav a {
+  font-family: 'Lato', Arial, sans-serif;
+  text-decoration: none;
+}
+
+nav {
+  a:hover {
+    @include single-text-shadow(0,0,4px,5px, #ffffff);
+    @include transition(all 0.1s ease);
+  }
+  div:hover {
+    @include scale(1.05);
+    @include transition(all 0.1s ease);
+  }
+}
+
 .stars {
   background:#000 url(../img/starscape2.jpg) no-repeat center center;
   z-index:-2;
