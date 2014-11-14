@@ -73,19 +73,37 @@ $().ready(function() {
     }
   });
 
-  $(".slider").css("width", "300%");
+  $(".slider a").css("width", "300%");
 
-  $('#btn-left').click(function(){
+  $('#btn-left').click(function(e){
+    e.preventDefault();
     if (sliderIndex < $(".slider").children.length) {
       sliderIndex += 1;
       $('#slider').css("left", (sliderIndex *-100) +"%");
+      if (sliderIndex >= $(".slider").children.length) {
+        $('#btn-left').hide();
+        $('#btn-right').show();
+      } else {
+        $('#btn-left').show();
+      }
+    } else {
+      return;
     }
   });
 
-  $('#btn-right').click(function(){
+  $('#btn-right a').click(function(e){
+    e.preventDefault();
     if (sliderIndex > 0) {
       sliderIndex -= 1;
       $('#slider').css("left", (sliderIndex *-100) +"%");
+      if (sliderIndex <= 0) {
+        $('#btn-right').hide();
+        $('#btn-left').show();
+      } else {
+        $('#btn-right').show();
+      }
+    } else {
+      return;
     }
   });
 });

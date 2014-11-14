@@ -46,6 +46,7 @@ html, body
     font-size: 100px;
     color: #000000;
     font-family: 'andersregular', Arial, sans-serif;
+    width: 100%;
 }
 
 nav {
@@ -180,6 +181,8 @@ nav a {
   margin: 0; padding: 0;
   height: 100%;
   width: 300%;
+  padding-bottom: 150px;
+  @include box-sizing();
   @include transition(all 0.5s ease);
   ul {
     width: 100%;
@@ -190,9 +193,6 @@ nav a {
       width: 1/3*100%;
       height: 100%;
     }
-  :nth-child(1) {
-    background: yellow;
-  }
   :nth-child(2) {
     background: red;
   }
@@ -212,8 +212,18 @@ nav a {
 
 #btn-left {
   left: 0;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #btn-right {
   right: 0;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
