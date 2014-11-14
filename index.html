@@ -37,15 +37,25 @@
                 <a href="">MUTE</a>
             </div>
         </nav>
-        <div class="container">
-            <div id="content-1">
-                <p>
-                    THE YEAR OF LIGHT
-                </p>
-            </div>
-            <div id="content-2"></div><div id="content-3"></div>
-        </div>
         
+        <ul>
+            <li id="btn-left"></li>
+            <li id="btn-right"></li>
+        </ul>
+
+        <div id="slider">
+            <ul>
+                 <li>
+                    <p class="logo">
+                        THE YEAR OF LIGHT
+                    </p>
+                </li>
+                <li>
+                </li>
+                <li>
+                </li>            
+            </ul>  
+        </div>        
         <div class="video">
             
         </div>
@@ -59,6 +69,12 @@
         <script src="js/skrollr.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script> 
+        <script>
+          var sliders = []
+          $('.slider').each(function() {
+            sliders.push(new Slider(this))
+          })
+        </script>
         <script type="text/javascript">
         var s = skrollr.init();
         </script>

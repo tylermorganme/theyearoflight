@@ -4,6 +4,7 @@
 // leading edge, instead of the trailing.
 var mute = false;
 var home = false;
+var sliderIndex = 0;
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
@@ -63,12 +64,28 @@ $().ready(function() {
 
   $('#btn-mute').click(function() {
 
-  if (mute) {
-    $("#btn-mute a").html("MUTE"); 
-    mute = !mute;
-  } else {
-    $("#btn-mute a").html("UNMUTE");
-    mute = !mute;
-  }
+    if (mute) {
+      $("#btn-mute a").html("MUTE"); 
+      mute = !mute;
+    } else {
+      $("#btn-mute a").html("UNMUTE");
+      mute = !mute;
+    }
+  });
+
+  $(".slider").css("width", "300%");
+
+  $('#btn-left').click(function(){
+    if (sliderIndex < $(".slider").children.length) {
+      sliderIndex += 1;
+      $('#slider').css("left", (sliderIndex *-100) +"%");
+    }
+  });
+
+  $('#btn-right').click(function(){
+    if (sliderIndex > 0) {
+      sliderIndex -= 1;
+      $('#slider').css("left", (sliderIndex *-100) +"%");
+    }
   });
 });

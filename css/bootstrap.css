@@ -370,32 +370,9 @@ html, body {
 }
 
 /* line 41, ../stylesheets/_main.scss */
-.container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 300%;
-}
-
-/* line 49, ../stylesheets/_main.scss */
-div[id^="content"] {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-}
-
-/* line 57, ../stylesheets/_main.scss */
-#content-1 {
-  left: 0;
-  width: 33.33333%;
-}
-/* line 60, ../stylesheets/_main.scss */
-#content-1 p {
+.logo {
   margin: 25px 0 0 25px;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   font-size: 100px;
@@ -403,30 +380,16 @@ div[id^="content"] {
   font-family: 'andersregular', Arial, sans-serif;
 }
 
-/* line 71, ../stylesheets/_main.scss */
-#content-2 {
-  left: 33.33333%;
-  width: 33.33333%;
-  background: red;
-}
-
-/* line 77, ../stylesheets/_main.scss */
-#content-3 {
-  left: 66.66667%;
-  width: 33.33333%;
-  background: green;
-}
-
-/* line 83, ../stylesheets/_main.scss */
+/* line 51, ../stylesheets/_main.scss */
 nav {
   z-index: 2;
 }
-/* line 85, ../stylesheets/_main.scss */
+/* line 53, ../stylesheets/_main.scss */
 nav a {
   font-family: 'Lato', Arial, sans-serif;
   text-decoration: none;
 }
-/* line 89, ../stylesheets/_main.scss */
+/* line 57, ../stylesheets/_main.scss */
 nav a:hover {
   text-shadow: 0 0 4px #ffffff;
   text-shadow: 0 0 4px 5px #ffffff;
@@ -435,7 +398,7 @@ nav a:hover {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-/* line 93, ../stylesheets/_main.scss */
+/* line 61, ../stylesheets/_main.scss */
 nav div:hover {
   -moz-transform: scale(1.05, 1.05);
   -ms-transform: scale(1.05, 1.05);
@@ -447,14 +410,14 @@ nav div:hover {
   transition: all 0.1s ease;
 }
 
-/* line 99, ../stylesheets/_main.scss */
+/* line 67, ../stylesheets/_main.scss */
 .stars {
   background: #000 url(../img/starscape2.jpg) no-repeat center center;
   z-index: -2;
   height: 100%;
 }
 
-/* line 105, ../stylesheets/_main.scss */
+/* line 73, ../stylesheets/_main.scss */
 .twinkling {
   background: transparent url(../img/flicker.png) repeat top center;
   z-index: -1;
@@ -465,7 +428,7 @@ nav div:hover {
   animation: move-twink-back 200s linear infinite;
 }
 
-/* line 116, ../stylesheets/_main.scss */
+/* line 84, ../stylesheets/_main.scss */
 .stars, .twinkling {
   position: fixed;
   top: 0;
@@ -478,20 +441,20 @@ nav div:hover {
   filter: invert(1);
 }
 
-/* line 127, ../stylesheets/_main.scss */
+/* line 95, ../stylesheets/_main.scss */
 .content {
   padding: 5px;
   background: #ffffff;
 }
 
-/* line 132, ../stylesheets/_main.scss */
+/* line 100, ../stylesheets/_main.scss */
 nav {
   position: relative;
   top: 0;
   width: 100%;
   height: 300px;
 }
-/* line 138, ../stylesheets/_main.scss */
+/* line 106, ../stylesheets/_main.scss */
 nav > div {
   position: fixed;
   padding: 0;
@@ -507,13 +470,13 @@ nav > div {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* line 151, ../stylesheets/_main.scss */
+/* line 119, ../stylesheets/_main.scss */
 .lower-nav {
   top: 100%;
   margin-top: -125px;
 }
 
-/* line 156, ../stylesheets/_main.scss */
+/* line 124, ../stylesheets/_main.scss */
 #btn-play {
   left: 25px;
   -moz-transition: all 0.75s ease;
@@ -522,7 +485,7 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 161, ../stylesheets/_main.scss */
+/* line 129, ../stylesheets/_main.scss */
 #btn-home {
   left: 50%;
   margin-left: -50px;
@@ -532,7 +495,7 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 167, ../stylesheets/_main.scss */
+/* line 135, ../stylesheets/_main.scss */
 #btn-mute {
   right: 25px;
   -moz-transition: all 0.75s ease;
@@ -541,17 +504,17 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 172, ../stylesheets/_main.scss */
+/* line 140, ../stylesheets/_main.scss */
 .upper-nav {
   top: 25px;
 }
 
-/* line 176, ../stylesheets/_main.scss */
+/* line 144, ../stylesheets/_main.scss */
 .sticky-nav {
   height: 150px;
 }
 
-/* line 180, ../stylesheets/_main.scss */
+/* line 148, ../stylesheets/_main.scss */
 .disappear {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -561,7 +524,7 @@ nav > div {
   transition: all 0.5s ease;
 }
 
-/* line 185, ../stylesheets/_main.scss */
+/* line 153, ../stylesheets/_main.scss */
 #tubular-container {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -569,7 +532,7 @@ nav > div {
   transition: all 0.5s ease;
 }
 
-/* line 189, ../stylesheets/_main.scss */
+/* line 157, ../stylesheets/_main.scss */
 nav a {
   display: block;
   height: 100px;
@@ -579,7 +542,67 @@ nav a {
   text-align: center;
 }
 
-/* line 198, ../stylesheets/_main.scss */
+/* line 166, ../stylesheets/_main.scss */
 .non-scrollable {
   overflow: hidden;
+}
+
+/* line 174, ../stylesheets/_main.scss */
+#slider {
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 300%;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 184, ../stylesheets/_main.scss */
+#slider ul {
+  width: 100%;
+  height: 100%;
+}
+/* line 188, ../stylesheets/_main.scss */
+#slider li {
+  float: left;
+  width: 33.33333%;
+  height: 100%;
+}
+/* line 193, ../stylesheets/_main.scss */
+#slider :nth-child(1) {
+  background: yellow;
+}
+/* line 196, ../stylesheets/_main.scss */
+#slider :nth-child(2) {
+  background: red;
+}
+/* line 199, ../stylesheets/_main.scss */
+#slider :nth-child(3) {
+  background: blue;
+}
+
+/* line 204, ../stylesheets/_main.scss */
+#btn-left, #btn-right {
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  width: 100px;
+  background: #000000;
+  z-index: 100;
+}
+
+/* line 213, ../stylesheets/_main.scss */
+#btn-left {
+  left: 0;
+}
+
+/* line 217, ../stylesheets/_main.scss */
+#btn-right {
+  right: 0;
 }
