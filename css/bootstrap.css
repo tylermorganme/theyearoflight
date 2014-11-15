@@ -595,7 +595,7 @@ nav a {
   height: 100px;
   width: 100px;
   background: #000000;
-  z-index: 100;
+  z-index: 3;
 }
 
 /* line 213, ../stylesheets/_main.scss */
@@ -607,15 +607,23 @@ nav a {
   display: block;
   width: 100%;
   height: 100%;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-/* line 222, ../stylesheets/_main.scss */
+/* line 223, ../stylesheets/_main.scss */
 #btn-right {
   right: 0;
 }
-/* line 224, ../stylesheets/_main.scss */
+/* line 225, ../stylesheets/_main.scss */
 #btn-right a {
   display: block;
   width: 100%;
   height: 100%;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
