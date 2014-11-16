@@ -363,13 +363,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-position: -10000px 5000px;
   }
 }
-/* line 35, ../stylesheets/_main.scss */
+/* line 37, ../stylesheets/_main.scss */
 html, body {
   height: 100%;
   width: 100%;
 }
 
-/* line 41, ../stylesheets/_main.scss */
+/* line 43, ../stylesheets/_main.scss */
 .logo {
   margin: 25px 0 0 25px;
   position: relative;
@@ -381,16 +381,16 @@ html, body {
   width: 100%;
 }
 
-/* line 52, ../stylesheets/_main.scss */
+/* line 54, ../stylesheets/_main.scss */
 nav {
   z-index: 2;
 }
-/* line 54, ../stylesheets/_main.scss */
+/* line 56, ../stylesheets/_main.scss */
 nav a {
   font-family: 'Lato', Arial, sans-serif;
   text-decoration: none;
 }
-/* line 58, ../stylesheets/_main.scss */
+/* line 60, ../stylesheets/_main.scss */
 nav a:hover {
   text-shadow: 0 0 4px #ffffff;
   text-shadow: 0 0 4px 5px #ffffff;
@@ -399,7 +399,7 @@ nav a:hover {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-/* line 62, ../stylesheets/_main.scss */
+/* line 64, ../stylesheets/_main.scss */
 nav div:hover {
   -moz-transform: scale(1.05, 1.05);
   -ms-transform: scale(1.05, 1.05);
@@ -411,14 +411,14 @@ nav div:hover {
   transition: all 0.1s ease;
 }
 
-/* line 68, ../stylesheets/_main.scss */
+/* line 70, ../stylesheets/_main.scss */
 .stars {
   background: #000 url(../img/starscape2.jpg) no-repeat center center;
   z-index: -2;
-  height: 100%;
+  background-size: cover;
 }
 
-/* line 74, ../stylesheets/_main.scss */
+/* line 76, ../stylesheets/_main.scss */
 .twinkling {
   background: transparent url(../img/flicker.png) repeat top center;
   z-index: -1;
@@ -429,33 +429,33 @@ nav div:hover {
   animation: move-twink-back 200s linear infinite;
 }
 
-/* line 85, ../stylesheets/_main.scss */
+/* line 87, ../stylesheets/_main.scss */
 .stars, .twinkling {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 120%;
+  height: 100%;
   display: block;
   -webkit-filter: invert(1);
   filter: invert(1);
 }
 
-/* line 96, ../stylesheets/_main.scss */
+/* line 98, ../stylesheets/_main.scss */
 .content {
   padding: 5px;
   background: #ffffff;
 }
 
-/* line 101, ../stylesheets/_main.scss */
+/* line 103, ../stylesheets/_main.scss */
 nav {
   position: relative;
   top: 0;
   width: 100%;
   height: 300px;
 }
-/* line 107, ../stylesheets/_main.scss */
+/* line 109, ../stylesheets/_main.scss */
 nav > div {
   position: fixed;
   padding: 0;
@@ -471,13 +471,13 @@ nav > div {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* line 120, ../stylesheets/_main.scss */
+/* line 122, ../stylesheets/_main.scss */
 .lower-nav {
   top: 100%;
   margin-top: -125px;
 }
 
-/* line 125, ../stylesheets/_main.scss */
+/* line 127, ../stylesheets/_main.scss */
 #btn-play {
   left: 25px;
   -moz-transition: all 0.75s ease;
@@ -486,7 +486,7 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 130, ../stylesheets/_main.scss */
+/* line 132, ../stylesheets/_main.scss */
 #btn-home {
   left: 50%;
   margin-left: -50px;
@@ -496,7 +496,7 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 136, ../stylesheets/_main.scss */
+/* line 138, ../stylesheets/_main.scss */
 #btn-mute {
   right: 25px;
   -moz-transition: all 0.75s ease;
@@ -505,17 +505,17 @@ nav > div {
   transition: all 0.75s ease;
 }
 
-/* line 141, ../stylesheets/_main.scss */
+/* line 143, ../stylesheets/_main.scss */
 .upper-nav {
   top: 25px;
 }
 
-/* line 145, ../stylesheets/_main.scss */
+/* line 147, ../stylesheets/_main.scss */
 .sticky-nav {
   height: 150px;
 }
 
-/* line 149, ../stylesheets/_main.scss */
+/* line 151, ../stylesheets/_main.scss */
 .disappear {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -525,7 +525,7 @@ nav > div {
   transition: all 0.5s ease;
 }
 
-/* line 154, ../stylesheets/_main.scss */
+/* line 156, ../stylesheets/_main.scss */
 #tubular-container {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -533,7 +533,7 @@ nav > div {
   transition: all 0.5s ease;
 }
 
-/* line 158, ../stylesheets/_main.scss */
+/* line 160, ../stylesheets/_main.scss */
 nav a {
   display: block;
   height: 100px;
@@ -543,15 +543,16 @@ nav a {
   text-align: center;
 }
 
-/* line 167, ../stylesheets/_main.scss */
+/* line 169, ../stylesheets/_main.scss */
 .non-scrollable {
   overflow: hidden;
 }
 
-/* line 175, ../stylesheets/_main.scss */
+/* line 177, ../stylesheets/_main.scss */
 #slider {
   position: fixed;
   overflow: hidden;
+  display: none;
   left: 0;
   top: 0;
   list-style: none;
@@ -560,6 +561,7 @@ nav a {
   height: 100%;
   width: 300%;
   padding-bottom: 150px;
+  z-index: 2;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -568,62 +570,102 @@ nav a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 187, ../stylesheets/_main.scss */
+/* line 192, ../stylesheets/_main.scss */
 #slider ul {
+  position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 191, ../stylesheets/_main.scss */
+/* line 197, ../stylesheets/_main.scss */
 #slider li {
+  position: relative;
   float: left;
   width: 33.33333%;
   height: 100%;
 }
-/* line 196, ../stylesheets/_main.scss */
-#slider :nth-child(2) {
-  background: red;
-}
-/* line 199, ../stylesheets/_main.scss */
-#slider :nth-child(3) {
-  background: blue;
-}
 
-/* line 204, ../stylesheets/_main.scss */
+/* line 205, ../stylesheets/_main.scss */
 #btn-left, #btn-right {
   position: absolute;
   top: 50%;
   height: 100px;
   width: 100px;
-  background: #000000;
   z-index: 3;
+  background-repeat: no-repeat;
 }
 
-/* line 213, ../stylesheets/_main.scss */
+/* line 214, ../stylesheets/_main.scss */
 #btn-left {
   left: 0;
 }
-/* line 215, ../stylesheets/_main.scss */
+/* line 216, ../stylesheets/_main.scss */
 #btn-left a {
   display: block;
   width: 100%;
   height: 100%;
+  margin-left: 25px;
+  background: url(../img/left.svg);
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-/* line 223, ../stylesheets/_main.scss */
+/* line 226, ../stylesheets/_main.scss */
 #btn-right {
   right: 0;
 }
-/* line 225, ../stylesheets/_main.scss */
+/* line 228, ../stylesheets/_main.scss */
 #btn-right a {
   display: block;
   width: 100%;
   height: 100%;
+  margin-left: -25px;
+  background: url(../img/right.svg);
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+/* line 238, ../stylesheets/_main.scss */
+#gallery div {
+  position: absolute;
+  width: 30%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 249, ../stylesheets/_main.scss */
+#gallery div:before {
+  content: "";
+  display: block;
+  margin-top: 100%;
+}
+
+/* line 253, ../stylesheets/_main.scss */
+#gallery .img-show {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }

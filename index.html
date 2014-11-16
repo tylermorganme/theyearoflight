@@ -7,20 +7,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/bootstrap.css">
-        <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
-        <!--
-        <script> 
-        //This is the ReEmber video code.
-        (function(a,b,c,d,e){var f=a+"Q";b[a]=b[a]||{};b[a][d]=b[a][d]||function(){
-        (b[f]=b[f]||[]).push(arguments)};a=c.getElementsByTagName(e)[0];c=c.createElement(e);c.async=1;
-        c.src="//static.reembed.com/data/scripts/g_2305_f4f3842067371a7482293bcab70b7637.js";
-        a.parentNode.insertBefore(c,a)})("reEmbed",window,document,"setupPlaylist","script");
-        </script>
-        -->
+        <script src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script> 
     </head>
     <body class="non-scrollable">
+        <div class="video">
+            
+        </div>
+        <script type="text/javascript">
+            $('.video').tubular({videoId: 'Ubg6lRQyhNM', mute: true});
+        </script>
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -38,39 +35,33 @@
             </div>
         </nav>
         
-        <ul>
-            <li id="btn-left"><a href="#"></a></li>
+        <ul id="slider-nav">
+            <li id="btn-left" class="disappear"><a href="#"></a></li>
             <li id="btn-right" class="disappear"><a href="#"></a></li>
         </ul>
 
         <div id="slider">
-            <ul>
+            <ul id="slider-elements">
                  <li>
                     <p class="logo">
                         THE YEAR OF LIGHT
                     </p>
-                </li>
-                <li>
+                </li>  
+                <li id="gallery">
+
                 </li>
                 <li>
                 </li>            
             </ul>  
-        </div>        
-        <div class="video">
-            
         </div>
-        <!--
-        <div class="container content">
-            <iframe width="1280" height="720" src="//www.youtube.com/embed/Ubg6lRQyhNM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        -->
+
         <div class="twinkling"></div>
-        <script src="js/jquery-1.11.1.js"></script>
+        
         <script src="js/skrollr.js"></script>
         <script src="js/main.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script> 
+        
         <script type="text/javascript">
-        var s = skrollr.init();
+            var s = skrollr.init();
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
